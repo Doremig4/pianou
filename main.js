@@ -18,7 +18,7 @@ function playNote(note) {
   const oscillator = audioCtx.createOscillator();
   const gain = audioCtx.createGain();
 
-  oscillator.type = 'sawtooth';
+  oscillator.type = 'sine';
   oscillator.frequency.value = noteFrequencies[note];
   gain.gain.value = 0.2;
 
