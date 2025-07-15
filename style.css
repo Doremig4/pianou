@@ -1,0 +1,78 @@
+body {
+  background: #f5f5f5;
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.piano {
+  position: relative;
+  width: 420px;
+  height: 220px;
+  margin: 40px auto;
+}
+
+.white-key {
+  position: absolute;
+  width: 60px;
+  height: 200px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 2px 4px 4px #ccc;
+  text-align: center;
+  line-height: 200px;
+  font-size: 22px;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  bottom: 0;
+}
+
+.black-key {
+  position: absolute;
+  width: 36px;
+  height: 120px;
+  background: #111;
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+  z-index: 2;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  padding-top: 10px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 2px 4px 8px #222;
+  bottom: 80px;
+}
+
+.black-key span {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: pre-line;
+}
+
+/* 각 검은 건반의 위치를 흰 건반 중앙에 맞춤 */
+.black-key[data-note="C#"] { left: 42px; }
+.black-key[data-note="D#"] { left: 102px; }
+.black-key[data-note="F#"] { left: 222px; }
+.black-key[data-note="G#"] { left: 282px; }
+.black-key[data-note="A#"] { left: 342px; }
+
+.spacer { width: 60px; display: inline-block; }
+
+.piano {
+  min-width: 420px;
+}
+
+.white-key:nth-of-type(1) { left: 0px; }
+.white-key:nth-of-type(2) { left: 60px; }
+.white-key:nth-of-type(3) { left: 120px; }
+.white-key:nth-of-type(4) { left: 180px; }
+.white-key:nth-of-type(5) { left: 240px; }
+.white-key:nth-of-type(6) { left: 300px; }
+.white-key:nth-of-type(7) { left: 360px; }
